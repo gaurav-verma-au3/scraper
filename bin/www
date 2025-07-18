@@ -6,6 +6,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import myntra from "../scrapers/myntra.js";
+import nykaa from "../scrapers/nykaa.js";
 // Load environment variables
 dotenv.config();
 
@@ -82,7 +83,7 @@ wsServer.on("request", (request) => {
         if (app === "Myntra") {
           myntra(query, location, connection);
         } else if (app === "Nykaa") {
-          myntra(query, location, connection);
+          nykaa(query, location, connection);
         }
       }
     }
