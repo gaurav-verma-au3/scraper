@@ -27,7 +27,7 @@ const myntra = async (query, location, connection) => {
 
   try {
     await mkdir(location, { recursive: true });
-    const browser = await puppeteer.launch({ executablePath: executablePath(), headless: false, argszzzc: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage", "--use-fake-ui-for-media-stream", "--auto-open-devtools-for-tabs"] });
+    const browser = await puppeteer.launch({ executablePath: executablePath(), headless: false, args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage", "--use-fake-ui-for-media-stream", "--auto-open-devtools-for-tabs"] });
     const pages = await browser.pages();
     const page = pages[0];
     // const userAgent = new UserAgents();
